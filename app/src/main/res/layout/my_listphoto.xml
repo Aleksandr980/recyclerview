@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/widget_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/widget_custom_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:id="@+id/widget_custom_text"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:layout_margin="0dp"
+                android:background="#888889"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/widget_custom_left"
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rover"
+                        android:layout_width="240dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:text="Rover"
+                        app:layout_constraintBottom_toTopOf="@+id/camera"
+                        app:layout_constraintEnd_toStartOf="@+id/sol"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/image"
+                        app:layout_constraintTop_toTopOf="@+id/image" />
+
+                    <TextView
+                        android:id="@+id/camera"
+                        android:layout_width="240dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="100dp"
+                        android:text="Camera"
+                        app:layout_constraintBottom_toBottomOf="@+id/image"
+                        app:layout_constraintEnd_toStartOf="@+id/date"
+                        app:layout_constraintStart_toStartOf="@+id/image"
+                        app:layout_constraintTop_toBottomOf="@+id/rover" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/widget_custom_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sol"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+                        android:textColor="@color/white"
+                        android:text="Sol"
+                        app:layout_constraintBottom_toTopOf="@+id/date"
+                        app:layout_constraintEnd_toEndOf="@+id/image"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/rover"
+                        app:layout_constraintTop_toTopOf="@+id/image" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:text="Date"
+                        app:layout_constraintBottom_toBottomOf="@+id/image"
+                        app:layout_constraintEnd_toEndOf="@+id/image"
+                        app:layout_constraintStart_toEndOf="@+id/camera"
+                        app:layout_constraintTop_toBottomOf="@+id/sol" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
